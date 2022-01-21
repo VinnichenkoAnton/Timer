@@ -1,0 +1,38 @@
+.timer {
+    width: 25rem;
+    border: 0.5rem dashed;
+    padding:0.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .timer__block {
+    width: 5rem
+  }
+  .timer__dots{
+    line-height: 115%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(46, 43, 43);
+} 
+  .timer__dots_animated {
+    animation: 1s infinite linear twinkle;
+  } 
+  @keyframes twinkle {
+    from {
+      color: black;
+    }
+  
+    to {
+      color: transparent;
+    }
+  }
+
+  @media(max-width: 576px) {
+    .timer {
+      width: 84%;
+      font-size: 3rem;
+    }
+  }

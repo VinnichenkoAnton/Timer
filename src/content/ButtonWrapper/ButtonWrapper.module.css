@@ -1,0 +1,47 @@
+.btns {
+  margin-top: 20px;
+  width: 24%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  width: 4em;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: transparent;
+  padding: 1px 6px;
+}
+.btn:hover {
+  background: rgb(250, 250, 250);
+    box-shadow: inset 0 0 0 3px black;
+  cursor: pointer; 
+}
+.startbtn {
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 1px 6px;
+  width: 5em;
+  margin: 0 10px;
+  font-size: 35px;
+  background-color: rgb(166, 207, 99);
+}
+
+.startbtn:hover {
+  background: rgb(230, 236, 169);
+  box-shadow: inset 0 0 0 3px black;
+  cursor: pointer; 
+}
+
+@media (max-width: 1400px) {
+  .btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  .startbtn {
+    order: -1;
+  }
+}

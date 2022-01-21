@@ -1,0 +1,32 @@
+.interval__wrapper {
+    width: 16rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.interval {
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(46, 43, 43);
+}
+.interval__colon{
+    line-height: 115%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(46, 43, 43);
+} 
+.interval__numeration {
+    width: 3rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 0 0.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(46, 43, 43);
+}
+
+@media (max-width: 576px) {
+    .interval, .interval__colon, .interval__numeration {
+        font-size: 2.5rem;
+    }
+}
