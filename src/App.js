@@ -7,14 +7,7 @@ import ButtonWrapper from './content/ButtonWrapper/ButtonWrapper';
 import Interval from './content/Interval/Interval';
 
 function genID() {
-  const timeStamp = Date.now();
-  let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-  let Id = '';
-  for (let i = 0; i < 7; i++) {
-    let rom = Math.floor(1 + (str.length - 1) * Math.random());
-    Id += str.charAt(rom);
-  }
-  Id += timeStamp.toString();
+  let Id = Date.now();
   return Id;
 }
 

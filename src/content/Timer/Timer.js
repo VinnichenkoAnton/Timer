@@ -1,15 +1,21 @@
 import styles from './Timer.module.css';
 
 const Timer = props => {
+    const stylesCheck = props.isToggled ? `${styles['timer__dots']} ${styles['timer__dots_animated']}` : styles['timer__dots'];
+
+    const timeSlicer = (timeframe)=> {
+        return ('0' + (timeframe) % 100).slice(-2);
+    };
+    
     return (
         <section className={styles.timer}>
-            <div className={styles['timer__block']}>{('0' + (props.currentTime.hours) % 100).slice(-2)}</div>
-            <div  className={props.isToggled === true ? `${styles['timer__dots']} ${styles['timer__dots_animated']}` : styles['timer__dots']} >:</div>
-            <div className={styles['timer__block']}>{('0' + (props.currentTime.minutes) % 100).slice(-2)}</div>
-            <div  className={props.isToggled === true ? `${styles['timer__dots']} ${styles['timer__dots_animated']}` : styles['timer__dots']} >:</div>
-            <div className={styles['timer__block']}>{('0' + (props.currentTime.seconds) % 100).slice(-2)}</div>
-            <div  className={props.isToggled === true ? `${styles['timer__dots']} ${styles['timer__dots_animated']}` : styles['timer__dots']} >:</div>
-            <div className={styles['timer__block']}>{('0' + (props.currentTime.mlseconds) % 100).slice(-2)}</div>
+            <div className={styles['timer__block']}>{timeSlicer(props.currentTime.hours)}</div>
+            <div  className={stylesCheck} >:</div>
+            <div className={styles['timer__block']}>{timeSlicer(props.currentTime.minutes)}</div>
+            <div  className={stylesCheck} >:</div>
+            <div className={styles['timer__block']}>{timeSlicer(props.currentTime.seconds)}</div>
+            <div  className={stylesCheck} >:</div>
+            <div className={styles['timer__block']}>{timeSlicer(props.currentTime.mlseconds)}</div>
         </section>
     );
 };
